@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6AF83E8E-EAC3-435C-9F45-EB654B40EF99}"
+	ProjectSection(SolutionItems) = preProject
+		NetCalc.html = NetCalc.html
+		notes.txt = notes.txt
+		StyleSheet1.css = StyleSheet1.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0346F6F-23C8-467B-8778-B551B6C54DDC}
+	EndGlobalSection
+EndGlobal
