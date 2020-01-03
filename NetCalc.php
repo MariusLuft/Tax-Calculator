@@ -29,16 +29,14 @@
                         </div>
                     </section>
                     <section title="tax-form">
+
                         <!--PHP handling input-->
                         <?php
                         $salary = "";
-                        $year = "";
-                        $state = "";
                         $salary_error = "";
-                        $year_error = "";
                         $error = false;
                         $brutto = 0;
-                        $factor = 0;
+                        $factor = 0.64;
 
                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             if (empty($_POST["salary"])) {
@@ -48,23 +46,7 @@
                             $salary = $_POST["salary"];
                             }
                         }
-
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                            if (empty($_POST["year"])) {
-                                $year_error = "Year is required";
-                                $error = true;
-                            }   else {
-                            $year = $_POST["year"];
-                            }
-                        }
-
-                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                        $state = $_POST["state"];
-                        }
-
                         ?>
-
-
 
                         <form action="" method="POST">
                             <div class="input-area">
@@ -73,30 +55,6 @@
                                     <input class="input-field" type="number" placeholder="Annual Gross Salary" name="salary" />
                                     <span class="error"><?php if(empty($_POST["salary"])) {echo '* ', $salary_error;}?></span>
                                 </div>
-                                <p class="input-text">Year:</p>
-                                <div class="error-wrap">
-                                    <input class="input-field" type="number" min="2018" max="2020" placeholder="Year" name="year" />
-                                    <span class="error"><?php if(empty($_POST["year"])) {echo '* ', $year_error;}?></span>
-                                </div>
-                                <p class="input-text">State:</p>
-                                <select class="input-field" type="text" placeholder="State" name="state">
-                                    <option value="Sachsen">Sachsen</option>
-                                    <option value="Thueringen">Thueringen</option>
-                                    <option value="Sachsen-Anhalt">Sachsen-Anhalt</option>
-                                    <option value="Niedersachsen">Niedersachsen</option>
-                                    <option value="Meckelenburg-Vorpommern">Meckelenburg-Vorpommern</option>
-                                    <option value="Bremen">Bremen</option>
-                                    <option value="Hamburg">Hamburg</option>
-                                    <option value="Bayern">Bayern</option>
-                                    <option value="Rheinland Pfalz">Rheinland Pfalz</option>
-                                    <option value="Saarland">Saarland</option>
-                                    <option value="Schlesswig-Holstein">Schlesswig-Holstein</option>
-                                    <option value="Hessen">Hessen</option>
-                                    <option value="Baden-Württemberg">Baden-Württemberg</option>
-                                    <option value="Berlin">Berlin</option>
-                                    <option value="Brandenburg">Brandenburg</option>
-                                    <option value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
-                                </select>
                                 <button type="submit" id="submit-button" value="Calculate Now">Calculate Now</button> <br />
                             </div>
                         </form>                   
@@ -105,14 +63,12 @@
                         <div class="result-table">
                               <?php
                                         if (!$error) {
+                                            
+                                            $brutto = $salary * $factor;
 
                                             echo "<h2>Alright, here are your results:</h2>";
                                             echo "<p>Your salary is</p>";
                                             echo "<p>$salary</p>";
-                                            echo "<p>The year is</p>";
-                                            echo "<p>$year</p>";
-                                            echo "<p>The state is</p>";
-                                            echo "<p>$state</p>";
                                             echo "<p>Your Gross Salary: </p>";
                                             echo "<p>$brutto</p>";
                                         }
