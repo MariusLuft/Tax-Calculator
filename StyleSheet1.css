@@ -65,3 +65,7 @@ body
     height: 45px;
     margin-left: 30%;
 }
+
+.error{
+    color: red;
+}
