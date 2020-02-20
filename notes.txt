@@ -1,7 +1,6 @@
 ﻿Todo: 
 	- Language Button to change between German and English
 	- Mobile Design with media queries
-	
 
 Done: 
 	- Create simple HTML structure for the form

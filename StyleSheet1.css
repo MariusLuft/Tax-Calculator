@@ -150,3 +150,7 @@ result-table {
 #golden-row {
     background-color: gold;
 }
+
+.error{
+    color: red;
+}
