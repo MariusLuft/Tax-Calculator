@@ -1,10 +1,11 @@
 ﻿Todo: 
 	- Language Button to change between German and English
 	- Mobile Design with media queries
-	- Make it look appealing through good CSS
-	- add PHP functionality to make it actually work
+	
 
 Done: 
 	- Create simple HTML structure for the form
 		- especially consider semantical structure	
 	- Order components with CSS Grid
+	- Make it look appealing through good CSS
+	- add PHP functionality to make it actually work (perhaps also with JS)
