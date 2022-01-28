@@ -7,5 +7,6 @@ In order to use this website it is neccessary to host the application on a serve
 ## How to use:
 Just enter your gross salary and see how much Tax you'd have to pay.
 
+![Tax_Calculator](https://github.com/MariusLuft/Tax_Calculator/blob/master/Capture.PNG)
 
 
